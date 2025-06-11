@@ -17,9 +17,12 @@ Mapping the current state of nut-allergy-friendliness of various restaurants, co
 ## Punch list
 - [x] create map shell: https://www.google.com/maps/d/u/0/edit?mid=1ByVtx0dsYJ8E_suvTlCRM363DHYZ6Io&ll=42.38269187688064%2C-71.09720596296654&z=15
 - [x] google form
-- [ ] script skeleton
+- [x] change visibility of site to public
+- [x] set up github pages for site (not possible until public)
+- [x] embed map in static site
+- [ ] add license
+- [ ] script skeleton (manual)
 - [ ] generate static site from script
-- [ ] embed map in static site
 - [ ] fill in script:
   - [ ] download sheet csv 
   - [ ] parse entries for website
@@ -28,9 +31,7 @@ Mapping the current state of nut-allergy-friendliness of various restaurants, co
   - [ ] format entries as map format (KML??)
 - [ ] figure out map upload; may be manual to start?
 - [ ] add big ol' faq/disclaimer about role of this info
-- [ ] add license
-- [x] change visibility of site to public
-- [ ] set up github pages for site (not possible until public)
+
 
 ### Feature creep future:
 - Run script via GHA instead of manually
