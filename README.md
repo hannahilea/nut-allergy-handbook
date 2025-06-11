@@ -10,6 +10,7 @@ Mapping the current state of nut-allergy-friendliness of various restaurants, co
 - [Manually trigger rebuild](TODO) - Not yet valid! TODO
 - [View map directly](TODO) - Not yet valid! TODO
 
+## (Aspirational) site generation workflow
 ![](./assets/workflow-plot.png)
 
 
