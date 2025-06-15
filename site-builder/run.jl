@@ -3,6 +3,7 @@ Pkg.activate(@__DIR__)
 using Dates
 using CSV
 using DataFrames
+using Downloads: download
 
 const SITE_DIR = joinpath(@__DIR__, "..")
 const SITE_INDEX_TEMPLATE = joinpath(@__DIR__, "index.template.html")
@@ -77,18 +78,43 @@ function generate_index(entries_df; overwrite_existing=false, template=SITE_INDE
     return nothing
 end
 
+function download_data!(data_path, id)
+    url = "https://docs.google.com/spreadsheets/d/$(id)/export?format=csv"
+    io = IOBuffer()
+    download(url, io)
+    str = String(take!(io))
+    write(data_path, str)
+    return nothing
+end
+
+# Thanks, https://discourse.julialang.org/t/how-to-best-store-and-access-credentials-in-julia/54997/12 !
+function load_secrets(filename="secrets.env")
+    isfile(filename) || return
+    i = 0
+    for line in eachline(filename)
+        var, val = strip.(split(line, "="))
+        ENV[var] = val
+        i += 1
+    end
+    println("\t$i secret(s) loaded")
+end
+
 # Run from commandline? 
 if abspath(PROGRAM_FILE) == @__FILE__
+    data_path = joinpath(SITE_DIR, "data.csv")
     if "--download" in ARGS
-        AIzaSyDjwVcZXpD4Knn9MnrAKuipANdVRu39GAU
+        @info "...downloading data..."
+        load_secrets()
+        id = get(ENV, "GOOGLE_SHEET_ID", missing)
+        download_data!(data_path, id)
+    else 
+        @info "Using pre-downloaded data..."
     end
 
-    @info "Generating index.html"
-    entry_list = CSV.read(joinpath(SITE_DIR, "temp",
-                                   "nut-free-mapper - Form Responses 1.csv"), DataFrame)
-    # @info entry_list
+    @info "...generating index.html..."
+    entry_list = CSV.read(data_path, DataFrame)
     generate_index(entry_list; overwrite_existing=true)
 
-    @info "Complete"
+    @info "Complete!"
     return nothing
 end

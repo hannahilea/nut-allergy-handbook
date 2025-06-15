@@ -60,6 +60,3 @@ Mapping the current state of nut-allergy-friendliness of various restaurants, co
 
 optional:
 - link to menu
-
-## Credits
-- Thanks to [wescpy.blogspot.com](https://wescpy.blogspot.com/2016/07/exporting-google-sheet--as-csv.html) for the pointer to use the Google Drive API instead of the Google Sheets API
