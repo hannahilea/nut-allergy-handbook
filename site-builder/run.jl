@@ -7,6 +7,7 @@ using Downloads: download
 
 const SITE_DIR = joinpath(@__DIR__, "..")
 const SITE_INDEX_TEMPLATE = joinpath(@__DIR__, "index.template.html")
+const KML_TEMPLATE = joinpath(@__DIR__, "map.template.kml")
 
 function get_table_html(df)
     str = """
@@ -44,7 +45,7 @@ function wrap_in_details_block(summary, content)
 end
 
 
-function generate_index(entries_df; overwrite_existing=false, template=SITE_INDEX_TEMPLATE)
+function generate_index!(entries_df; overwrite_existing=false, template=SITE_INDEX_TEMPLATE)
     outfile = joinpath(SITE_DIR, "index.html")
     if !overwrite_existing && isfile(outfile)
         @warn "Output file already exists; not overwriting: $outfile"
@@ -78,6 +79,24 @@ function generate_index(entries_df; overwrite_existing=false, template=SITE_INDE
     return nothing
 end
 
+function generate_kml!(kml_path, entry_list; overwrite_existing=true, template=KML_TEMPLATE)
+    if !overwrite_existing && isfile(kml_path)
+        @warn "Output file already exists; not overwriting: $kml_path"
+        return nothing
+    end
+    kml_str = read(template, String)
+
+    # TODO - insert stuff
+
+    try
+        run(`prettier $(outfile) --write`)
+    catch
+        @warn "Prettier not installed OR current html errors"
+    end
+
+    return nothing 
+end
+
 function download_data!(data_path, id)
     url = "https://docs.google.com/spreadsheets/d/$(id)/export?format=csv"
     io = IOBuffer()
@@ -102,6 +121,7 @@ end
 # Run from commandline? 
 if abspath(PROGRAM_FILE) == @__FILE__
     data_path = joinpath(SITE_DIR, "data.csv")
+    kml_path = joinpath(SITE_DIR, "map.kml")
     if "--download" in ARGS
         @info "...downloading data..."
         load_secrets()
@@ -110,10 +130,16 @@ if abspath(PROGRAM_FILE) == @__FILE__
     else 
         @info "Using pre-downloaded data..."
     end
+    entry_list = CSV.read(data_path, DataFrame)
+    @info "\t$(nrow(entry_list)) entries found"
 
     @info "...generating index.html..."
-    entry_list = CSV.read(data_path, DataFrame)
-    generate_index(entry_list; overwrite_existing=true)
+    # generate_index!(entry_list; overwrite_existing=true)
+
+    @info "...generating kml..."
+    generate_kml!(kml_path, entry_list; overwrite_existing=true)
+
+    @warn "Manual kml upload required!" kml_path upload_path="https://www.google.com/maps/d/u/0/edit?mid=1ByVtx0dsYJ8E_suvTlCRM363DHYZ6Io&ll=42.38098637730792%2C-71.09826765&z=16"
 
     @info "Complete!"
     return nothing

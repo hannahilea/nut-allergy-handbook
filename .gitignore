@@ -2,3 +2,4 @@ temp/
 Manifest.toml
 secrets.env
 data*.csv
+map.kml
