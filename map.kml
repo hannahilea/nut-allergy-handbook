@@ -3,7 +3,7 @@
   <Document>
     <name>Nut-safe mapper map!</name>
     <description/>
-            <Style id="icon-1502-0F9D58-normal">
+    <Style id="icon-1502-0F9D58-normal">
       <IconStyle>
         <color>ff589d0f</color>
         <scale>1</scale>
@@ -176,8 +176,105 @@
       </Pair>
     </StyleMap>
     <Folder>
+      <name>We could never go here </name>
+      <Placemark>  
+        <name><![CDATA[Union Square Donuts]]></name>
+        <description><![CDATA[Too many donuts have nuts on them or in them. ]]> https://maps.app.goo.gl/6BpjU9S1ctYsNKWQ6</description>
+        <styleUrl>#icon-1556-C2185B</styleUrl>
+        <Point>
+          <coordinates>-71.0972138,42.3808372</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>  
+        <name><![CDATA[Himalayan Kitchen]]></name>
+        <description><![CDATA[The menu is inconclusive regarding if they make their sauces with nuts. We tried to call once (circa 2022) and the person who answered the phone was not helpful and not willing to go ask the necessary questions. We assume that we can't go here. ]]> https://maps.app.goo.gl/QbR1okukSg7Nd7FB7</description>
+        <styleUrl>#icon-1556-C2185B</styleUrl>
+        <Point>
+          <coordinates>-71.0978897,42.3815252</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>  
+        <name><![CDATA[Life Alive Organic Cafe]]></name>
+        <description><![CDATA[Everything has peanut butter]]> https://maps.app.goo.gl/7HwRBSkbh8nTyStAA</description>
+        <styleUrl>#icon-1556-C2185B</styleUrl>
+        <Point>
+          <coordinates>-71.0944602,42.3781292</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+        <Folder>
+      <name>We would like to go here </name>
+      <Placemark>  
+        <name><![CDATA[Saus at Bow Market]]></name>
+        <description><![CDATA[They have cups of roasted peanuts in the kitchen as sides with the sandwiches. :( ]]> https://maps.app.goo.gl/2Panr44F3yfZh7JGA</description>
+        <styleUrl>#icon-1524-F57C00</styleUrl>
+        <Point>
+          <coordinates>-71.098234,42.381258</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>  
+        <name><![CDATA[Mike & Patty's]]></name>
+        <description><![CDATA[They have a fluffernutter sandwich :(. They used to be safe until they added this (and kept it around) for Somerville Fluff Fest. ]]> https://maps.app.goo.gl/UVNJF1R9MH1uaMDY7</description>
+        <styleUrl>#icon-1524-F57C00</styleUrl>
+        <Point>
+          <coordinates>-71.0981025,42.3809756</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+        <Folder>
+      <name>We go here cautiously </name>
+      <Placemark>  
+        <name><![CDATA[Vinal General Store]]></name>
+        <description><![CDATA[The general store is safe for sandwiches; the softserve is not (sometimes they put nutty flavors in the machine).  The next-door Vinal Bakery is not safe.]]> https://maps.app.goo.gl/BYNstWX5Eu5q3Bkh6</description>
+        <styleUrl>#icon-1541-FBC02D</styleUrl>
+        <Point>
+          <coordinates>-71.0915256,42.3779994</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>  
+        <name><![CDATA[Neighborhood Restaurant]]></name>
+        <description><![CDATA[Omelets, egg/potato dishes only: they have a banana nutella crepe, so we avoid the pancake/crepe/waffle section and the bakery.]]> https://maps.app.goo.gl/VwK7TGFrW8Skgvv27</description>
+        <styleUrl>#icon-1541-FBC02D</styleUrl>
+        <Point>
+          <coordinates>-71.0973497,42.3814955</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>  
+        <name><![CDATA[Petra]]></name>
+        <description><![CDATA[Safe as of last visit, but the owner said they are planning to add muhammara soon (which contains walnuts); when they do, we will stop going here. Kitchen is way too small to plausibly prevent cross-contamination. ]]> https://maps.app.goo.gl/3FBMpKTDcqstxMh28</description>
+        <styleUrl>#icon-1541-FBC02D</styleUrl>
+        <Point>
+          <coordinates>-71.0982662,42.3811877</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>  
+        <name><![CDATA[Bloc]]></name>
+        <description><![CDATA[Coffee drinks only! The baked goods and sandwiches are not safe: the sandwich components are prepared in the kitchen of Forge which makes muhammara (which contains walnuts) so even though the menu might look safe, as far as we know it is not. ]]> https://maps.app.goo.gl/SmhWvPcev2WCzLpV9</description>
+        <styleUrl>#icon-1541-FBC02D</styleUrl>
+        <Point>
+          <coordinates>-71.0968528,42.3808083</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>  
+        <name><![CDATA[Forge Baking Co. & Ice Cream Bar]]></name>
+        <description><![CDATA[Coffee drinks only! The kitchen makes muhammara (contains walnuts), the bakery makes various nutty pastries.]]> https://maps.app.goo.gl/JG2zKTbW9ZSxz6jeA</description>
+        <styleUrl>#icon-1541-FBC02D</styleUrl>
+        <Point>
+          <coordinates>-71.1108423,42.3838224</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>  
+        <name><![CDATA[Page & Leaf Cafe]]></name>
+        <description><![CDATA[Coffee drinks only! Baked goods, food, and smoothies are not. (Same owners, shared bakery, and menu concerns as as Bloc, Diesel, and Forge)]]> https://maps.app.goo.gl/oyktNGPga3SivCpX6</description>
+        <styleUrl>#icon-1541-FBC02D</styleUrl>
+        <Point>
+          <coordinates>-71.1186167,42.3873028</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
       <name>We go here </name>
-            <Placemark>  
+      <Placemark>  
         <name><![CDATA[Remnant Brewing - Taproom, Cafe, and Smiles.]]></name>
         <description><![CDATA[]]> https://maps.app.goo.gl/iViM69STU2dTmRZ68</description>
         <styleUrl>#icon-1502-0F9D58</styleUrl>
@@ -239,103 +336,6 @@
         <styleUrl>#icon-1502-0F9D58</styleUrl>
         <Point>
           <coordinates>-71.1009528,42.3691028</coordinates>
-        </Point>
-      </Placemark>
-    </Folder>
-    <Folder>
-      <name>We go here cautiously </name>
-            <Placemark>  
-        <name><![CDATA[Vinal General Store]]></name>
-        <description><![CDATA[The general store is safe for sandwiches; the softserve is not (sometimes they put nutty flavors in the machine).  The next-door Vinal Bakery is not safe.]]> https://maps.app.goo.gl/BYNstWX5Eu5q3Bkh6</description>
-        <styleUrl>#icon-1541-FBC02D</styleUrl>
-        <Point>
-          <coordinates>-71.0915256,42.3779994</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>  
-        <name><![CDATA[Neighborhood Restaurant]]></name>
-        <description><![CDATA[Omelets, egg/potato dishes only: they have a banana nutella crepe, so we avoid the pancake/crepe/waffle section and the bakery.]]> https://maps.app.goo.gl/VwK7TGFrW8Skgvv27</description>
-        <styleUrl>#icon-1541-FBC02D</styleUrl>
-        <Point>
-          <coordinates>-71.0973497,42.3814955</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>  
-        <name><![CDATA[Petra]]></name>
-        <description><![CDATA[Safe as of last visit, but the owner said they are planning to add muhammara soon (which contains walnuts); when they do, we will stop going here. Kitchen is way too small to plausibly prevent cross-contamination. ]]> https://maps.app.goo.gl/3FBMpKTDcqstxMh28</description>
-        <styleUrl>#icon-1541-FBC02D</styleUrl>
-        <Point>
-          <coordinates>-71.0982662,42.3811877</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>  
-        <name><![CDATA[Bloc]]></name>
-        <description><![CDATA[Coffee drinks only! The baked goods and sandwiches are not safe: the sandwich components are prepared in the kitchen of Forge which makes muhammara (which contains walnuts) so even though the menu might look safe, as far as we know it is not. ]]> https://maps.app.goo.gl/SmhWvPcev2WCzLpV9</description>
-        <styleUrl>#icon-1541-FBC02D</styleUrl>
-        <Point>
-          <coordinates>-71.0968528,42.3808083</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>  
-        <name><![CDATA[Forge Baking Co. & Ice Cream Bar]]></name>
-        <description><![CDATA[Coffee drinks only! The kitchen makes muhammara (contains walnuts), the bakery makes various nutty pastries.]]> https://maps.app.goo.gl/JG2zKTbW9ZSxz6jeA</description>
-        <styleUrl>#icon-1541-FBC02D</styleUrl>
-        <Point>
-          <coordinates>-71.1108423,42.3838224</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>  
-        <name><![CDATA[Page & Leaf Cafe]]></name>
-        <description><![CDATA[Coffee drinks only! Baked goods, food, and smoothies are not. (Same owners, shared bakery, and menu concerns as as Bloc, Diesel, and Forge)]]> https://maps.app.goo.gl/oyktNGPga3SivCpX6</description>
-        <styleUrl>#icon-1541-FBC02D</styleUrl>
-        <Point>
-          <coordinates>-71.1186167,42.3873028</coordinates>
-        </Point>
-      </Placemark>
-    </Folder>
-    <Folder>
-      <name>We would like to go here </name>
-            <Placemark>  
-        <name><![CDATA[Saus at Bow Market]]></name>
-        <description><![CDATA[They have cups of roasted peanuts in the kitchen as sides with the sandwiches. :( ]]> https://maps.app.goo.gl/2Panr44F3yfZh7JGA</description>
-        <styleUrl>#icon-1524-F57C00</styleUrl>
-        <Point>
-          <coordinates>-71.098234,42.381258</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>  
-        <name><![CDATA[Mike & Patty's]]></name>
-        <description><![CDATA[They have a fluffernutter sandwich :(. They used to be safe until they added this (and kept it around) for Somerville Fluff Fest. ]]> https://maps.app.goo.gl/UVNJF1R9MH1uaMDY7</description>
-        <styleUrl>#icon-1524-F57C00</styleUrl>
-        <Point>
-          <coordinates>-71.0981025,42.3809756</coordinates>
-        </Point>
-      </Placemark>
-    </Folder>
-    <Folder>
-      <name>We could never go here </name>
-            <Placemark>  
-        <name><![CDATA[Union Square Donuts]]></name>
-        <description><![CDATA[Too many donuts have nuts on them or in them. ]]> https://maps.app.goo.gl/6BpjU9S1ctYsNKWQ6</description>
-        <styleUrl>#icon-1556-C2185B</styleUrl>
-        <Point>
-          <coordinates>-71.0972138,42.3808372</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>  
-        <name><![CDATA[Himalayan Kitchen]]></name>
-        <description><![CDATA[The menu is inconclusive regarding if they make their sauces with nuts. We tried to call once (circa 2022) and the person who answered the phone was not helpful and not willing to go ask the necessary questions. We assume that we can't go here. ]]> https://maps.app.goo.gl/QbR1okukSg7Nd7FB7</description>
-        <styleUrl>#icon-1556-C2185B</styleUrl>
-        <Point>
-          <coordinates>-71.0978897,42.3815252</coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>  
-        <name><![CDATA[Life Alive Organic Cafe]]></name>
-        <description><![CDATA[Everything has peanut butter]]> https://maps.app.goo.gl/7HwRBSkbh8nTyStAA</description>
-        <styleUrl>#icon-1556-C2185B</styleUrl>
-        <Point>
-          <coordinates>-71.0944602,42.3781292</coordinates>
         </Point>
       </Placemark>
     </Folder>
