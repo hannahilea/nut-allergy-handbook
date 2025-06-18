@@ -1,16 +1,18 @@
-# WORK IN PROGRESS -- NOT YET LOVELY!
+_**WIP - Actively under construction!**_
 
-# Nut free mapper! 
+# Nut allergy handbook! 
+
+[<img alt="Static Badge" src="https://img.shields.io/badge/%F0%9F%AA%B4%20Houseplant%20-x?style=flat&amp;label=Project%20type&amp;color=1E1E1D">](https://www.hannahilea.com/blog/houseplant-programming)
+
+[<img alt="Static Badge" src="https://img.shields.io/badge/%F0%9F%8F%B3%EF%B8%8F%E2%80%8D%F0%9F%8C%88%20Gay%20Agenda%20License%201.0%20%F0%9F%8F%B3%EF%B8%8F%E2%80%8D%E2%9A%A7%EF%B8%8F-x?style=flat&amp;label=License&amp;color=FDF2F8">](./LICENSE.md)
+
 
 Mapping the current state of nut-allergy-friendliness of various restaurants, coffee shops, and other venues. 
 
-- View site: [https://nut-free-mapper.hannahilea.com](https://nut-free-mapper.hannahilea.com) - Not yet valid! TODO
-- [Submit new map entry](TODO) - Not yet valid! TODO
-- [Edit existing map entries](TODO-link-to-google-form) - Not yet valid! TODO
-- [Manually trigger rebuild](TODO) - Not yet valid! TODO
-- [View map directly](TODO) - Not yet valid! TODO
+🥳 **View site: [https://hannahilea.com/nut-allergy-handbook](https://hannahilea.com/nut-allergy-handbook)** 🥳
 
-## (Aspirational) site generation workflow
+## Site generation workflow
+
 ![](./assets/workflow-plot.png)
 
 
@@ -22,14 +24,14 @@ Mapping the current state of nut-allergy-friendliness of various restaurants, co
 - [x] embed map in static site
 - [x] generate static site from script
 - [ ] add license
-- [ ] fill in script:
+- [x] fill in script:
   - [x] download sheet csv 
   - [x] parse entries for website
   - [x] pull entries into website
-  - [ ] parse entries for map
-  - [ ] format entries as map format (KML??)
+  - [x] parse entries for map
+  - [x] format entries as map format (KML??)
 - [ ] figure out map upload; may be manual to start?
-- [ ] add big ol' faq/disclaimer sectio/page about role of this info
+- [ ] add big ol' faq/disclaimer section/page about role of this info
 - [ ] add links to tools used (e.g. css, google maps, etc)
 
 
@@ -45,6 +47,7 @@ Mapping the current state of nut-allergy-friendliness of various restaurants, co
 - Add (separate) workflow that supports nicer realtime site investigation (interop with Google Maps directly, etc)
 - Figure out how to add tags for venue type (cafe/food/etc)
 - Add separate page (?) for chain restaurants?
+- Add extra handbook pages
 
 
 ## Fields for form 
@@ -60,6 +63,15 @@ Mapping the current state of nut-allergy-friendliness of various restaurants, co
 optional:
 - link to menu
 
-## Build site manually
+## Rebuild site for new map entries
 
-Do `julia --project=site-builder site-builder/run.jl --download`
+Currently, this process is manual. In future, it will be automated. After new [map entries](https://forms.gle/qx1TQDyGLTcRK7NKA) are submitted:
+
+1. Rebuild site from new entries: `julia --project=site-builder site-builder/run.jl --download`
+
+2. Merge changes into the main branch to update the live site.
+
+2. Update the map with the updated `map.kml` file:
+  1. Go to [map](https://www.google.com/maps/d/u/0/edit?mid=1ByVtx0dsYJ8E_suvTlCRM363DHYZ6Io&ll=42.375241545463325%2C-71.11262795632939&z=14)
+  2. Delete all existing layers from map
+  3. Add new layer; import the `map.kml` file generated (/updated) by the site rebuild
