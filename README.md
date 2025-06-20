@@ -61,3 +61,8 @@ Content on other pages:
 - Add "hall of fame" for places that actively promote allergen friendliness AND that have moved from non-friendly to friendly?? + (geography-specific) rss feed for new safe venues??
   - ...stickers? :) 
 - Add resources page
+
+## Attributions
+
+- Favicon logo: Warning by Studio 365 from <a href="https://thenounproject.com/browse/icons/term/warning/" target="_blank" title="Warning Icons">Noun Project</a> (CC BY 3.0)
+- CSS Styling: [almond.css](https://github.com/alvaromontoro/almond.css) (yes, I did intentionally choose this one because of the name(!))
