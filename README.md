@@ -72,6 +72,10 @@ Currently, this process is manual. In future, it will be automated. After new [m
 2. Merge changes into the main branch to update the live site.
 
 2. Update the map with the updated `map.kml` file:
-  1. Go to [map](https://www.google.com/maps/d/u/0/edit?mid=1ByVtx0dsYJ8E_suvTlCRM363DHYZ6Io&ll=42.375241545463325%2C-71.11262795632939&z=14)
-  2. Delete all existing layers from map
-  3. Add new layer; import the `map.kml` file generated (/updated) by the site rebuild
+  Manually:
+    1. Go to [map](https://www.google.com/maps/d/u/0/edit?mid=1ByVtx0dsYJ8E_suvTlCRM363DHYZ6Io&ll=42.375241545463325%2C-71.11262795632939&z=14)
+    2. Delete all existing layers from map
+    3. Add new layer; import the `map.kml` file generated (/updated) by the site rebuild
+  Semi-automated (requires being signed into google account in Safari):
+    1. `automator clean-map.workflow` to delete existing layers
+    2. Add new layer by dragging updated `map.kml` into now-opened browser window
