@@ -37,7 +37,6 @@ Currently, this process is manual. In future, it will be automated. After new [m
 Will any of these ever be added? Great question, we'll find out together.
 
 ### Dev/script:
-- Add place details blob to map kml
 - Run script via GHA instead of manually
 - Support multiple entries for same venue (or just error if found/merge them)
 - Figure out how to support context-specific allergen status changes

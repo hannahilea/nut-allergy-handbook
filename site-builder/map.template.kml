@@ -176,19 +176,19 @@
       </Pair>
     </StyleMap>
     <Folder>
-      <name>We could never go here </name>
+      <name>We could never go here 🫥</name>
 {{ WE_COULD_NEVER_GO_HERE }}
     </Folder>
         <Folder>
-      <name>We would like to go here </name>
+      <name>We would like to go here 😢</name>
 {{ WE_WOULD_LIKE_TO_GO_HERE }}
     </Folder>
         <Folder>
-      <name>We go here cautiously </name>
+      <name>We go here cautiously 🙂</name>
 {{ WE_GO_HERE_CAUTIOUSLY }}
     </Folder>
     <Folder>
-      <name>We go here </name>
+      <name>We go here ☺️</name>
 {{ WE_GO_HERE }}
     </Folder>
   </Document>

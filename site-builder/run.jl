@@ -62,7 +62,7 @@ function generate_index!(entries_df)
         index_str = replace(index_str, "{{ $(template_key)_COUNT }}" => nrow(gdf))
 
         # Process for map
-        data_kml_str = get_map_kml(select(gdf, Not(:Classification)), template_key)
+        data_kml_str = get_map_kml(gdf, template_key)
         map_str = replace(map_str, "{{ $template_key }}" => data_kml_str)
     end
     write(index_path, index_str)
@@ -115,9 +115,15 @@ function get_map_kml(df, title)
             "#icon-1899-0288D1"
         end
 
+        description = """
+                        Assessment: $(entry.Classification)<br><br>
+                        $(isempty(entry.Details) ? "" : entry.Details * "<br><br>")
+                        Last checked: $(entry["Last checked"])
+                        <br>
+                      """
         data_str = """  
                 <name>$(_format(entry.Place))</name>
-                <description>$(_format(entry.Details)) $(entry.raw_link)</description>
+                <description>$("$(_format(description)) $(entry.raw_link)")</description>
                 <styleUrl>$style_url</styleUrl>
                 <Point>
                   <coordinates>$(_coordinates(entry.raw_link))</coordinates>
@@ -165,7 +171,7 @@ if abspath(PROGRAM_FILE) == @__FILE__
     println("\t$(nrow(entry_list)) entries found")
 
     @info "...generating index.html and map kml..."
-    generate_index!(entry_list)
+    generate_index!(entry_list[:, :])
 
     @warn "Manual kml upload required!" kml_path upload_path = "https://www.google.com/maps/d/u/0/edit?mid=1ByVtx0dsYJ8E_suvTlCRM363DHYZ6Io&ll=42.38098637730792%2C-71.09826765&z=16"
 
